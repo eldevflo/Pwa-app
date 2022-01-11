@@ -17,14 +17,14 @@
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     <script> 
-    if('serviceWorker' in navigator){
-      window.addEventListener('load', ()=>{
-        navigator.serviceWorker.register('./serviceworker.js')
-          .then((req)=> console.log('success' , req.scope))
-          .catch((err)=> console.log('error' , err))
+        if ('serviceWorker' in navigator) {
+          window.addEventListener('load', () => {
+            navigator.serviceWorker.register('./serviceworker.js')
+              .then((req) => console.log('success', req.scope))
+              .catch((err) => console.log('error', err))
 
-      })
-    }
+          })
+        }
     </script>
   </body>
 </html>
